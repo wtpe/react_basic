@@ -1,16 +1,13 @@
-import Condition from './Condition.js'
-import './App.scss';
-import Test from './Test';
-import InputEvent from './InputEvent.js';
+import RadioButton from "./RadioButton";
+import { useState } from "react";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
+  const [counter, setCounter] = useState(1)
 
-        <InputEvent />
-        <Condition />
-      </header>
-    </div>
+  const handleIncrease = () => {
+    setCounter(counter + 1)
+  }
+  return (
+    <RadioButton />
   );
 }
 
